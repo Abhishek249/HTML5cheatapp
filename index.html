@@ -1,0 +1,641 @@
+<!doctype html>
+<html>
+	<head>
+		<title>HTML 5 Cheat Sheet</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Slidebars CSS -->
+		<link rel="stylesheet" href="slidebars.css">
+		
+		<!-- Example Styles -->
+		<link rel="stylesheet" href="example-styles.css">
+		<script src="jquery-2.1.1.js"></script>
+		<script>
+			document.addEventListener('tizenhwkey', function(e) {
+					console.log("Tizen HW Event!");
+					//var activePage = $.mobile.activePage().attr('id'); // read current page
+					switch(e.keyName)
+					{
+							case 'back':
+									console.log("Back button pressed. Exiting Application");
+									tizen.application.getCurrentApplication().exit();
+									break;
+							case 'menu':
+									console.log("Menu button not yet supported.");
+									tizen.application.getCurrentApplication().exit();
+									break;
+							default:
+									console.log("Not supported.");
+					}
+			});
+		</script>
+		
+	</head>
+	
+	<body>	
+		<div id="sb-site">
+			<header class="sb-toggle-left"><img src="menu_icon.png" style="float:left;display:inline;border:5px solid white"> <h2 style="background:#CC3300;color:white;text-align:center">HTML5</h2></header>
+			<div id = "intro">
+				
+				<h1>HTML 5</h1>
+				<p>HTML5 is a core technology markup language of the Internet used for structuring and presenting content for the World Wide Web.
+				As of October 2014 this is the final and complete fifth revision of the HTML standard of the World Wide Web Consortium (W3C)</p>
+				<p>Its core aims have been to improve the language with support for the latest multimedia while keeping it easily readable by humans and consistently understood
+				by computers and devices (web browsers, parsers, etc.).
+				HTML5 is intended to subsume not only HTML 4, but also XHTML 1 and DOM Level 2 HTML.</br>
+
+				Following its immediate predecessors HTML 4.01 and XHTML 1.1, HTML5 is a response to the fact that the HTML and XHTML in common use on the World Wide Web
+				are a mixture of features introduced by various specifications, along with those introduced by software products such as web browsers, those established by
+				common practice, and the many syntax errors in existing web documents</p>
+				 </br>
+				 <p>
+					In particular, HTML5 adds many new syntactic features. These include the new &ltvideo&gt, &ltaudio&gt and &ltcanvas&gt elements,
+					as well as the integration of scalable vector graphics (SVG) content (replacing generic &ltobject&gt tags), and MathML for mathematical formulas.
+					These features are designed to make it easy to include and handle multimedia and graphical content on the web without having to resort to proprietary
+					plugins and APIs. Other new elements, such as &ltsection&gt, &ltarticle&gt, &ltheader&gt and &ltnav&gt, are designed to enrich the semantic content of documents.
+					New attributes have been introduced for the same purpose, while some elements and attributes have been removed. Some elements, such as &lta&gt, &ltcite&gt and &ltmenu&gt 
+					have been changed, redefined or standardized. The APIs and Document Object Model (DOM) are no longer afterthoughts, but are fundamental parts of the HTML5
+					specification. HTML5 also defines in some detail the required processing for invalid documents so that syntax errors will be treated uniformly by all
+					conforming browsers and other user agents.
+				 </p>
+				
+			</div>
+			<div id ="first">
+				<p>The &ltarticle&gt tag specifies independent, self-contained content.
+
+					An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+
+					Potential sources for the &ltarticle&gt element:
+					<ul>
+					<li>Forum post</li>
+					<li>Blog post</li>
+					<li>News story</li>
+					<li>Comments</li>
+					</ul>
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+&ltarticle&gt
+ &lth1&gtGoogle Chrome&lt/h1&gt
+ &ltp&gtGoogle Chrome is a free, open-source web browser developed by Google, released in 2008.&lt/p&gt
+&lt/article&gt
+				</pre>
+			</div>
+			
+			
+			<div id="second">
+			 <p>The &ltaside&gt tag defines some content aside from the content it is placed in.</br>
+				The aside content should be related to the surrounding content.</br>
+				The &ltaside&gt content could be placed as a sidebar in an article.
+					
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+&ltp&gtMy family and I visited The Epcot center this summer.&lt/p&gt
+&ltaside&gt
+ &lth4&gtEpcot Center&lt/h4&gt
+  &ltp&gtThe Epcot Center is a theme park in Disney World, Florida.&lt/p&gt
+&lt/aside&gt
+				</pre>
+			</div>
+			
+			<div id="third">
+				<p>The &ltaudio&gt tag defines sound, such as music or other audio streams.&lt/br&gt
+					Currently, there are 3 supported file formats for the &ltaudio&gt element: MP3, Wav, and Ogg.
+					
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+&ltaudio controls&gt
+ &ltsource src="horse.ogg" type="audio/ogg"&gt
+  &ltsource src="horse.mp3" type="audio/mpeg"&gt
+  Your browser does not support the audio tag.
+&lt/audio&gt
+				</br>
+					<audio controls>
+					  <source src="horse.ogg" type="audio/ogg">
+					  <source src="horse.mp3" type="audio/mpeg">
+					  Your browser does not support the audio tag.
+					</audio>
+				</pre>
+			</div>
+			
+			<div id="fourth">
+				<p>
+					The &ltaddress&gt tag defines the contact information for the author/owner of a document or an article.</br>
+
+					If the &ltaddress&gt element is inside the &ltbody&gt element, it represents contact information for the document.</br>
+
+					If the &ltaddress&gt element is inside an &ltarticle&gt element, it represents contact information for that article.</br>
+
+					The text in the &ltaddress&gt element usually renders in italic. Most browsers will add a line break before and after the address element.
+					
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+					
+&ltaddress&gt
+ Written by &lta href="mailto:webmaster@example.com"&gtAbhishek&lt/a&gt.&ltbr&gt 
+ Visit us at:&ltbr&gt
+ Example.com&ltbr&gt
+ Box 564, Disneyland&ltbr&gt
+ USA
+&lt/address&gt
+				</br>
+				<address>
+						Written by <a href="mailto:abhishek@example.com">Abhishek</a>.<br> 
+						Visit us at:<br>
+						Example.com<br>
+						Box 564, Disneyland<br>
+						USA
+				</address>
+				</pre>
+			</div>
+			
+			
+			<div id="fifth">
+				<p>
+					The &ltbody&gt tag defines the document's body.</br>
+					The &ltbody&gt element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.
+
+
+					
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+<!DOCTYPE html>
+&lthtml&gt
+ &lthead&gt
+  &lttitle&gtTitle of the document&lt/title&gt
+ &lt/head&gt
+&ltbody&gt
+	The content of the document......
+	&lt/body&gt
+&lt/html&gt
+				</br>
+					<!DOCTYPE html>
+					<html>
+					<head>
+					<title>Title of the document</title>
+					</head>
+					<body>
+					The content of the document......
+					</body>
+					</html>
+
+				</pre>
+			</div>
+						
+			
+			<div id="sixth">
+				<p>
+					The &ltbutton&gt tag defines a clickable button.</br>	
+					Inside a &ltbutton&gt element you can put content, like text or images.</br>
+					This is the difference between this element and buttons created with the &ltinput&gt element.					
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+&ltbutton type="button"&gtClick Me!&lt/button&gt
+				</br>
+					<button type="button">Click Me!</button>
+
+				</pre>
+			</div>
+			
+			<div id="seventh">
+				<p>
+					The &ltcanvas&gt tag is used to draw graphics, on the fly, via scripting (usually JavaScript).</br>
+					The &ltcanvas&gt tag is only a container for graphics, you must use a script to actually draw the graphics.					
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+&ltcanvas id="myCanvas"&gt&lt/canvas&gt
+
+&ltscript&gt
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(0, 0, 80, 80);
+&lt/script&gt
+								
+				</br>
+					<canvas id="myCanvas"></canvas>
+
+					<script>
+					var canvas = document.getElementById("myCanvas");
+					var ctx = canvas.getContext("2d");
+					ctx.fillStyle = "#FF0000";
+					ctx.fillRect(0, 0, 80, 80);
+					</script>
+
+				</pre>
+			</div>
+			
+			
+			<div id="eighth">
+				<p>
+					The &ltcaption&gt tag defines a table caption.</br>
+
+					The &ltcaption&gt tag must be inserted immediately after the &lttable&gt tag.</br>
+
+					<b>Note:</b> You can specify only one caption per table.</br>
+
+					<b>Tip:</b> By default, a table caption will be center-aligned above a table. However, the CSS properties text-align and caption-side can be used to align and place the caption.				
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+	<pre>		<!--inki width kam karo -->
+&lttable&gt
+  &ltcaption&gtDemo Monthly Savings&lt/caption&gt
+  &lttr&gt
+  &ltth&gtMonth&lt/th&gt
+  &ltth&gtSavings&lt/th&gt
+  &lt/tr&gt
+  &lttr&gt
+  &lttd&gtJanuary&lt/td&gt
+  &lttd&gt$100&lt/td&gt
+  &lt/tr&gt
+&lt/table&gt			
+												
+				</br>
+					<table style="background:#FFFF66;color:black">
+					  <caption style="background:black;color:white;border:2px solid white;padding:2px 2px 2px 2px">Demo Monthly savings</caption>
+					  <tr>
+						<th>Month</th>
+						<th>Savings</th>
+					  </tr>
+					  <tr>
+						<td>January</td>
+						<td>$100</td>
+					  </tr>
+					</table>
+
+				</pre>
+			</div>
+			
+			<div id="ninth">
+				<p>
+					The &ltdatalist&gt tag specifies a list of pre-defined options for an &ltinput&gt element.<br>
+
+					The &ltdatalist&gt tag is used to provide an "autocomplete" feature on &ltinput&gt elements.
+					Users will see a drop-down list of pre-defined options as they input data.</br>
+
+					Use the &ltinput&gt element's list attribute to bind it together with a &ltdatalist&gt element.		
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+					
+&lthtml&gt
+ &ltbody&gt
+	&ltform action="demo_form.asp" method="get"&gt
+	&ltinput list="browsers" name="browser"&gt
+	&ltdatalist id="browsers"&gt
+	  &ltoption value="Internet Explorer"&gt
+      &ltoption value="Firefox"&gt
+	  &ltoption value="Chrome"&gt
+	  &ltoption value="Opera"&gt
+	  &ltoption value="Safari"&gt
+	&lt/datalist&gt
+	&ltinput type="submit"&gt
+	&lt/form&gt
+
+	&ltp&gt&ltstrong&gtNote:&lt/strong&gt The datalist tag is not supported in Internet Explorer 9 and earlier versions, or in Safari.&lt/p&gt	
+
+ &lt/body&gt
+&lt/html&gt
+												
+						</br>
+					<!DOCTYPE html>
+					<html>
+					<body>
+						<form action="demo_form.asp" method="get">
+						<input list="browsers" name="browser">
+						<datalist id="browsers">
+						  <option value="Internet Explorer">
+						  <option value="Firefox">
+						  <option value="Chrome">
+						  <option value="Opera">
+						  <option value="Safari">
+						</datalist>
+						<input type="submit">
+						</form>
+
+						<p><strong>Note:</strong> The datalist tag is not supported in Internet Explorer 9 and earlier versions, or in Safari.</p>
+
+					</body>
+					</html>
+				</pre>
+				
+			</div>
+			
+			<div id="tenth">
+				<p>
+					The &ltfooter&gt tag defines a footer for a document or section.</br>
+
+					A &ltfooter&gt element should contain information about its containing element.</br>
+
+					A &ltfooter&gt element typically contains:
+					<ul>
+					<li>authorship information</li>
+					<li>copyright information</li>
+					<li>contact information</li>
+					<li>sitemap</li>
+					<li>back to top links</li>
+					<li>related documents</li>
+					</ul>
+					<i>You can have several &ltfooter&gt elements in one document.</i>	
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+&ltfooter&gt
+	&ltp&gtPosted by: Hege Refsnes&lt/p&gt
+	&ltp&gtContact information: &lta href="mailto:someone@example.com"&gt
+	someone@example.com&lt/a&gt.&lt/p&gt
+&lt/footer&gt			
+				</br>
+				<footer>
+				  <p>Posted by: Hege Refsnes</p>
+				  <p>Contact information: <a href="mailto:someone@example.com">
+				  someone@example.com</a>.</p>
+				</footer>
+				</pre>
+			</div>
+			
+			<div id="eleventh">
+				<p>
+				The &ltform&gt tag is used to create an HTML form for user input.</br>
+
+				The &ltform&gt element can contain one or more of the following form elements:</br>
+				<ul>
+				<li>&ltinput&gt</li>
+				<li>&lttextarea&gt</li>
+				<li>&ltbutton&gt</li>
+				<li>&ltselect&gt</li>
+				<li>&ltoption&gt</li>
+				<li>&ltoptgroup&gt</li>
+				<li>&ltfieldset&gt</li>
+				<li>&ltlabel&gt</li>
+				</ul>
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+				<pre>		<!--inki width kam karo -->
+&ltform action="demo_form.asp"&gt
+	First name: &ltinput type="text" name="FirstName" value="Mickey"&gt&ltbr&gt
+	Last name: &ltinput type="text" name="LastName" value="Mouse"&gt&ltbr&gt
+	&ltinput type="submit" value="Submit"&gt
+&lt/form&gt			
+				</br>
+				<form action="demo_form.asp">
+				First name: <input type="text" name="FirstName" value="Mickey"><br>
+				Last name: <input type="text" name="LastName" value="Mouse"><br>
+				<input type="submit" value="Submit">
+				</form>
+				</pre>
+			</div>
+			
+			<div id="twelfth">
+				<p>
+					The &ltkeygen&gt tag specifies a key-pair generator field used for forms.</br>
+
+					When the form is submitted, the private key is stored locally, and the public key is sent to the server.
+				
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+	<pre>		<!--inki width kam karo -->
+&ltform action="demo_keygen.asp" method="get"&gt
+  Username: &ltinput type="text" name="usr_name"&gt
+  Encryption: &ltkeygen name="security"&gt
+  &ltinput type="submit"&gt
+&lt/form&gt					
+				</br>
+	<form action="demo_keygen.asp" method="get">
+	  Username: <input type="text" name="usr_name">
+	  Encryption: <keygen name="security">
+	  <input type="submit">
+	</form>	
+	</pre>
+			</div>
+		
+			<div id="thirteenth">
+				<p>
+					Metadata is data (information) about data.</br>	
+
+					The &ltmeta&gt tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable.
+
+					Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata.</br>
+
+					The metadata can be used by browsers (how to display content or reload page), search engines (keywords), or other web services.
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+	<pre>		<!--inki width kam karo -->
+&lthead&gt
+	&ltmeta charset="UTF-8"&gt
+	&ltmeta name="description" content="Free Web tutorials"&gt
+	&ltmeta name="keywords" content="HTML,CSS,XML,JavaScript"&gt
+	&ltmeta name="author" content="Hege Refsnes"&gt
+&lt/head&gt
+				</br>
+					
+				</pre>
+			</div>
+			
+			<div id="fourteenth">
+				<p>
+					The &ltprogress&gt tag represents the progress of a task.
+				</p>
+				<p>Browsers Supported</p>
+				<ul>
+					<li><img src="gc.png"></li>
+					<li><img src="ie.png"></li>
+					<li><img src="ff.png"></li>
+					<li><img src="sa.png"></li>
+					<li><img src="op.png"></li>
+				</ul>
+				
+				<p><strong>Example</strong></p>
+	<pre>		<!--inki width kam karo -->
+Downloading progress:
+&ltprogress value="22" max="100"&gt&lt/progress&gt
+&ltp&gt&ltstrong&gtNote:&lt/strong&gt The progress tag is not supported in Internet Explorer 9 and earlier versions.&lt/p&gt
+			</br>
+					<progress value="22" max="100"></progress>
+
+				<p><strong>Note:</strong> The progress tag is not supported in Internet Explorer 9 and earlier versions.</p>
+				</pre>
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		<div class="sb-slidebar sb-left">
+			<!-- Your left Slidebar content. -->
+			<h2 style="background:#cc3300;color:white;text-align:center">INDEX</h2>
+			
+			<ul class="index">
+				<li><a href="#intro"><div>About</div></a></li>
+				<li><a href="#first"><div>article Tag</div></a></li>
+				<li><a href="#second"><div>aside Tag</div></a></li>
+				<li><a href="#third"><div>audio Tag</div></a></li>
+				<li><a href="#fourth"><div>address Tag</div></a></li>
+				<li><a href="#fifth"><div>body Tag</div></a></li>
+				<li><a href="#sixth"><div>button Tag</div></a></li>
+				<li><a href="#seventh"><div>canvas Tag</div></a></li>
+				<li><a href="#eighth"><div>caption Tag</div></a></li>
+				<li><a href="#ninth"><div>datalist Tag</div></a></li>
+				<li><a href="#tenth"><div>footer Tag</div></a></li>
+				<li><a href="#eleventh"><div>form Tag</div></a></li>
+				<li><a href="#twelfth"><div>keygen Tag</div></a></li>
+				<li><a href="#thirteenth"><div>meta Tag</div></a></li>
+				<li><a href="#fourteenth"><div>progress Tag</div></a></li>
+			</ul>
+		</div>
+		
+		<footer style="text-align:center;color:white;background-color:rgba(27,27,74,0.4);">
+			&copy Abhishek2k49
+		</footer>
+				
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+		<!-- Slidebars -->
+		<script src="slidebars.js"></script>
+		<script>
+			(function($) {
+				$(document).ready(function() {
+					$.slidebars();
+					var first = $($('.sb-slidebar li a')[0]).attr('href');
+					$('.sb-slidebar li a').each(function(num,element){
+						$($(element).attr('href')).hide();
+						$(first).show();
+						$(first).addClass('activePage');
+					});
+					$('.sb-slidebar li a').bind('click',function(event){
+						var element = $(this).attr('href');
+						if ($(element).css('display')=='none'){
+						    $(element).fadeToggle(1000);
+						    $('.activePage').hide();
+						    $('.activePage').removeClass('activePage');
+						    $(element).addClass('activePage');
+						}
+					});
+				});
+			}) (jQuery);
+		</script>
+	</body>
+</html>
